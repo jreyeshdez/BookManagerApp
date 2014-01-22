@@ -1,7 +1,7 @@
 BookManagerApp
 ==============
 
-Development of a personal music manager application using Struts 2, 
+Development of a personal book manager application using Struts 2,
 Hibernate and MySQL database. The web application can be used to add 
 your book collection to the database. There will be a form to add 
 the record and underneath you will show all the book collections. 
