@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><component name="dataSourceStorage">
+  <data-source source="LOCAL" name="Data Source" product="" version="" jdbc-version="" driver-name="" driver-version="" uuid="4357fa00-1adf-4f8e-986d-b2a8de7f7597">
+    <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+    <jdbc-url>jdbc:mysql://localhost:3306/book_manager</jdbc-url>
+    <user-name>root</user-name>
+    <user-password>dfd8dfc5dfc5dfde</user-password>
+    <schema-pattern>book_manager.*</schema-pattern>
+    <default-schemas>book_manager.*</default-schemas>
+    <libraries>
+      <library>
+        <url>jar://C:/Program Files/NetBeans 7.0.1/ide/modules/ext/mysql-connector-java-5.1.13-bin.jar!/</url>
+      </library>
+    </libraries>
+  </data-source>
+</component>

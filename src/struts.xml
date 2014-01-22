@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+
+    <constant name="struts.enable.DynamicMethodInvocation" value="false" />
+    <constant name="struts.devMode" value="false" />
+
+    <package name="default" extends="struts-default" namespace="/">
+        <default-action-ref name="index"/>
+        <action name="index">
+            <result>index.jsp</result>
+        </action>
+        <action name="listBook"
+                class="com.jreyes.apps.bmgr.web.actions.BookManagerAction" method="getAllBookList" >
+            <result name="success">WEB-INF/web/jsps/bookmngr.jsp</result>
+            <result name="error">WEB-INF/web/jsps/error.jsp</result>
+        </action>
+        
+        <action name="addBook"
+                class="com.jreyes.apps.bmgr.web.actions.BookManagerAction" method="addBookToCollection">
+            <result name="input">listBook.action</result>
+            <result name="success" type="redirectAction">listBook</result>
+        </action>
+
+        <action name="delBook"
+                class="com.jreyes.apps.bmgr.web.actions.BookManagerAction" method="delBookFromCollection">
+            <result name="success" type="redirectAction">listBook</result>
+
+        </action>
+
+    </package>
+</struts>

@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+        <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.jreyes.apps.bmgr.db.businessobjects.BooktblBO" table="booktbl"
+           catalog="book_manager">
+        <id name="bookId" type="int">
+            <column name="book_id" />
+            <generator class="assigned" />
+        </id>
+        <property name="bookTitle" type="string">
+            <column name="book_title" not-null="true"/>
+        </property>
+        <property name="bookGenre" type="string">
+            <column name="book_genre" not-null="true"/>
+        </property>
+        <property name="bookAuthors" type="string">
+            <column name="book_authors" length="65535" not-null="true"/>
+        </property>
+        <property name="noOfPages" type="int">
+            <column name="no_of_pages" not-null="true" />
+        </property>
+           </class>
+</hibernate-mapping>
